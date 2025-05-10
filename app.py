@@ -5,8 +5,8 @@ import numpy as np
 app = Flask(__name__)
 
 # Load model
-model = pickle.load(open('rf_classifier.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+model = pickle.load(open('models/rf_classifier.pkl', 'rb'))
+scaler = pickle.load(open('models/scaler.pkl', 'rb'))
 
 # Prediction function
 def predict(model, scaler, male, age, currentSmoker, cigsPerDay, BPMeds, prevalentStroke, prevalentHyp, diabetes,
